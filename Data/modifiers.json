@@ -1,0 +1,8 @@
+{
+  "thin_air":   { "name": "Thin Air",   "desc": "The air is thin here. You begin the fight with -1 Breath.", "flags": { "start_breath": -1 } },
+  "ambush":     { "name": "Ambush",     "desc": "This fight just started and you're already bleeding. Start missing 1 HP.", "flags": { "start_hp": -1 } },
+  "crazed":     { "name": "Crazed",     "desc": "Its eyes are wrong. It lunges far more than it should.", "flags": { "enemy_aggression": 2 } },
+  "heavy_rain": { "name": "Heavy Rain", "desc": "Rain drums in the dark, blurring your read of the forest. Calm reads more common this fight.", "flags": { "calm_up": 0.18 } },
+  "blood_moon": { "name": "Blood Moon", "desc": "Red light through the canopy. The beast is swollen with power - but so is the harvest.", "flags": { "enemy_hp": 3, "blood_bonus": 4 } },
+  "fog":        { "name": "Fog",        "desc": "Thick fog muffles the world. The forest runs hot and hard to read.", "flags": { "enemy_aggression": 1, "calm_up": 0.12 } }
+}

@@ -1,0 +1,15 @@
+{
+  "deer":        { "color": "#c8a26a", "shape": "diamond" },
+  "rabbit":      { "color": "#d8d8d0", "shape": "circle" },
+  "fox":         { "color": "#e07a3c", "shape": "triangle" },
+  "stoat":       { "color": "#cfc08a", "shape": "triangle" },
+  "boar":        { "color": "#8a6a4a", "shape": "square" },
+  "wolf_cub":    { "color": "#9aa0aa", "shape": "triangle" },
+  "lynx":        { "color": "#b9915c", "shape": "diamond" },
+  "razorback":   { "color": "#6e4b34", "shape": "square" },
+  "stag":        { "color": "#a98a5c", "shape": "hex" },
+  "wolf":        { "color": "#7d848f", "shape": "triangle" },
+  "leadwolf":    { "color": "#5b6270", "shape": "triangle" },
+  "greaterstag": { "color": "#c2a06a", "shape": "hex" },
+  "bear":        { "color": "#5a4632", "shape": "square" }
+}

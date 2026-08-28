@@ -1,0 +1,9 @@
+{
+  "iron_body":     { "name": "Iron Body",     "desc": "+1 Max HP, every run.",             "cost": 8,  "flags": { "max_hp": 1 } },
+  "deep_reserves": { "name": "Deep Reserves",  "desc": "+1 Max Breath, every run.",         "cost": 8,  "flags": { "max_breath": 1 } },
+  "steady_nerve":  { "name": "Steady Nerve",   "desc": "Start each run at +1 Dominance.",   "cost": 6,  "flags": { "start_dominance": 1 } },
+  "hunters_gift":  { "name": "Hunter's Gift",  "desc": "Start each run with +3 Blood.",     "cost": 5,  "flags": { "start_blood": 3 } },
+  "old_bones":     { "name": "Old Bones",      "desc": "Start each run with a common item already in your pouch.", "cost": 7, "flags": { "start_item": "random_common" } },
+  "phantom_step":  { "name": "Phantom Step",   "desc": "Permanently learn Dodge for free.", "cost": 10, "flags": { "unlock_move": "dodge" }, "requires": { "best_battle": 6 } },
+  "apex_lineage":  { "name": "Apex Lineage",   "desc": "+2 Max HP and +1 Max Breath, every run.", "cost": 16, "flags": { "max_hp": 2, "max_breath": 1 }, "requires": { "best_battle": 10 } }
+}

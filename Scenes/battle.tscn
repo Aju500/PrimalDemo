@@ -1,0 +1,516 @@
+[gd_scene load_steps=4 format=3 uid="uid://lh2hf3u5x6n2"]
+
+[ext_resource type="Script" uid="uid://c4sxo4tai3wie" path="res://Scenes/battle.gd" id="1_oxf17"]
+[ext_resource type="Texture2D" uid="uid://eo33u5hh5uvb" path="res://Assets/BattleBackground.PNG" id="1_w7k78"]
+[ext_resource type="Script" uid="uid://blfc4iafufgnx" path="res://Scenes/creature.gd" id="3_creat"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_oxf17")
+
+[node name="BattleBackground" type="TextureRect" parent="."]
+offset_right = 1173.0
+offset_bottom = 718.0
+texture = ExtResource("1_w7k78")
+expand_mode = 1
+
+[node name="FadeRect" type="ColorRect" parent="."]
+offset_right = 1176.0
+offset_bottom = 699.0
+color = Color(0, 0, 0, 0)
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="UI" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="UILayer/UI"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_constants/separation = 8
+
+[node name="DomBox" type="HBoxContainer" parent="UILayer/UI/VBox"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DomLabel" type="Label" parent="UILayer/UI/VBox/DomBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "DOMINANCE  0"
+vertical_alignment = 1
+
+[node name="DomBar" type="ProgressBar" parent="UILayer/UI/VBox/DomBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -5.0
+max_value = 5.0
+step = 1.0
+show_percentage = false
+
+[node name="EnemyPanel" type="Panel" parent="UILayer/UI/VBox"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.3
+
+[node name="EnemyName" type="Label" parent="UILayer/UI/VBox/EnemyPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 450.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 26
+text = "???"
+
+[node name="EnemyHPBar" type="ProgressBar" parent="UILayer/UI/VBox/EnemyPanel"]
+modulate = Color(0.9, 0.25, 0.25, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 50.0
+offset_right = 300.0
+offset_bottom = 68.0
+show_percentage = false
+
+[node name="EnemyHPLabel" type="Label" parent="UILayer/UI/VBox/EnemyPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 72.0
+offset_right = 300.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.9, 0.55, 0.55, 1)
+theme_override_font_sizes/font_size = 15
+text = "HP  -/-"
+
+[node name="Creature" type="Control" parent="UILayer/UI/VBox/EnemyPanel"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.0
+offset_top = 34.0
+offset_right = 78.0
+offset_bottom = 190.0
+script = ExtResource("3_creat")
+
+[node name="EnemyTell" type="Label" parent="UILayer/UI/VBox/EnemyPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 100.0
+offset_right = 460.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Tell: observe to reveal"
+
+[node name="EnemySprite" type="TextureRect" parent="UILayer/UI/VBox/EnemyPanel"]
+visible = false
+layout_mode = 0
+anchor_left = 0.65
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+expand_mode = 3
+stretch_mode = 6
+
+[node name="MiddleHBox" type="HBoxContainer" parent="UILayer/UI/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="LogPanel" type="Panel" parent="UILayer/UI/VBox/MiddleHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CombatLog" type="RichTextLabel" parent="UILayer/UI/VBox/MiddleHBox/LogPanel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+bbcode_enabled = true
+scroll_following = true
+
+[node name="InfoPanel" type="Panel" parent="UILayer/UI/VBox/MiddleHBox"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PhaseLabel" type="Label" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 248.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 19
+text = "..."
+
+[node name="YouLabel" type="Label" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 13
+text = "YOU"
+
+[node name="PlayerHPBar" type="ProgressBar" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+modulate = Color(0.25, 0.85, 0.35, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 60.0
+offset_right = 248.0
+offset_bottom = 76.0
+show_percentage = false
+
+[node name="PlayerHPLabel" type="Label" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 80.0
+offset_right = 248.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.6, 1, 0.65, 1)
+theme_override_font_sizes/font_size = 14
+text = "HP  -/-"
+
+[node name="BreathLabel" type="Label" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 100.0
+offset_right = 248.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.35, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Breath  -/-"
+
+[node name="FocusLabel" type="Label" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 120.0
+offset_right = 248.0
+offset_bottom = 136.0
+theme_override_colors/font_color = Color(0.75, 0.45, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Focus  0"
+
+[node name="BloodLabel" type="Label" parent="UILayer/UI/VBox/MiddleHBox/InfoPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 140.0
+offset_right = 248.0
+offset_bottom = 156.0
+theme_override_colors/font_color = Color(0.9, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 14
+text = "Blood  0"
+
+[node name="ButtonHBox" type="HBoxContainer" parent="UILayer/UI/VBox"]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="ObserveBtn" type="Button" parent="UILayer/UI/VBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "OBSERVE
+0 Breath  →  +2 Breath
+Reveals next tell"
+
+[node name="ClawBtn" type="Button" parent="UILayer/UI/VBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CLAW
+2 Breath  →  2 + Focus Damage"
+
+[node name="GuardBtn" type="Button" parent="UILayer/UI/VBox/ButtonHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "GUARD
+1 Breath  →  -1 Damage Taken"
+
+[node name="HintLabel" type="Label" parent="UILayer/UI"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -34.0
+offset_right = 420.0
+offset_bottom = -10.0
+theme_override_colors/font_color = Color(0.6, 0.68, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+text = "Scroll or press SPACE for moves  ·  click the creature to OBSERVE"
+horizontal_alignment = 1
+
+[node name="MoveWheel" type="Control" parent="UILayer/UI"]
+visible = false
+anchors_preset = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -320.0
+offset_right = 170.0
+offset_bottom = -44.0
+
+[node name="Panel" type="Panel" parent="UILayer/UI/MoveWheel"]
+self_modulate = Color(0.06, 0.08, 0.07, 0.94)
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="WheelList" type="VBoxContainer" parent="UILayer/UI/MoveWheel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_constants/separation = 6
+
+[node name="RestartBtn" type="Button" parent="UILayer/UI"]
+visible = false
+z_index = 10
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -45.0
+offset_right = 120.0
+offset_bottom = 5.0
+text = "ANOTHER RUN"
+
+[node name="CaveBtn" type="Button" parent="UILayer/UI"]
+visible = false
+z_index = 10
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = 15.0
+offset_right = 120.0
+offset_bottom = 65.0
+text = "RETURN TO THE CAVE"
+
+[node name="MenuBtn" type="Button" parent="UILayer/UI"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 13
+text = "POUCH"
+
+[node name="BestiaryBtn" type="Button" parent="UILayer/UI"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -298.0
+offset_top = 8.0
+offset_right = -158.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 13
+text = "BESTIARY"
+
+[node name="ExitBtn" type="Button" parent="UILayer/UI"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 42.0
+offset_right = -12.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 13
+text = "EXIT (save)"
+
+[node name="PouchOverlay" type="Control" parent="UILayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="UILayer/UI/PouchOverlay"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.66)
+
+[node name="Panel" type="Panel" parent="UILayer/UI/PouchOverlay"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -230.0
+offset_right = 290.0
+offset_bottom = 230.0
+
+[node name="Title" type="Label" parent="UILayer/UI/PouchOverlay/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 16.0
+offset_right = 558.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 22
+text = "POUCH"
+
+[node name="Hint" type="Label" parent="UILayer/UI/PouchOverlay/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 50.0
+offset_right = 558.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 12
+text = "Max 3 instincts per category. Remove to make room."
+
+[node name="Scroll" type="ScrollContainer" parent="UILayer/UI/PouchOverlay/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 564.0
+offset_bottom = 396.0
+horizontal_scroll_mode = 0
+
+[node name="PouchList" type="VBoxContainer" parent="UILayer/UI/PouchOverlay/Panel/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="CloseBtn" type="Button" parent="UILayer/UI/PouchOverlay/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 404.0
+offset_right = 560.0
+offset_bottom = 440.0
+text = "CLOSE"
+
+[node name="BestiaryOverlay" type="Control" parent="UILayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="UILayer/UI/BestiaryOverlay"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.72)
+
+[node name="Panel" type="Panel" parent="UILayer/UI/BestiaryOverlay"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -250.0
+offset_right = 340.0
+offset_bottom = 250.0
+
+[node name="Title" type="Label" parent="UILayer/UI/BestiaryOverlay/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 658.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 22
+text = "BESTIARY"
+
+[node name="Scroll" type="ScrollContainer" parent="UILayer/UI/BestiaryOverlay/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 52.0
+offset_right = 664.0
+offset_bottom = 452.0
+horizontal_scroll_mode = 0
+
+[node name="BestiaryText" type="RichTextLabel" parent="UILayer/UI/BestiaryOverlay/Panel/Scroll"]
+custom_minimum_size = Vector2(632, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = true
+
+[node name="CloseBtn" type="Button" parent="UILayer/UI/BestiaryOverlay/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 458.0
+offset_right = 660.0
+offset_bottom = 492.0
+text = "CLOSE"
+
+[node name="FadeLayer" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="Overlay" type="ColorRect" parent="FadeLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="DebugLayer" type="CanvasLayer" parent="."]
+layer = 30
+
+[node name="DebugPanel" type="Panel" parent="DebugLayer"]
+visible = false
+self_modulate = Color(0.05, 0.05, 0.08, 0.92)
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 470.0
+offset_bottom = 640.0
+
+[node name="DebugText" type="RichTextLabel" parent="DebugLayer/DebugPanel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+bbcode_enabled = true

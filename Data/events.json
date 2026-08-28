@@ -1,0 +1,126 @@
+{
+  "cooldown": 4,
+  "events": {
+	"watering_hole": { "weight": 10, "title": "WATERING HOLE",
+	  "intro": "A moonlit pond lies still and silver between the trees.",
+	  "choices": [
+		{ "text": "DRINK DEEP\nHeal 2 HP", "eff": { "heal": 2 } },
+		{ "text": "REST BY THE WATER\nRestore all Breath", "eff": { "breath": 99 } },
+		{ "text": "SEARCH THE SHALLOWS\n+3 Blood", "eff": { "blood": 3 } }
+	  ] },
+	"carcass": { "weight": 10, "title": "CARCASS",
+	  "intro": "A half-eaten deer, still warm. Something left in a hurry.",
+	  "choices": [
+		{ "text": "FEAST\nHeal 3 HP", "eff": { "heal": 3 } },
+		{ "text": "STRIP THE MEAT\n+6 Blood", "eff": { "blood": 6 } },
+		{ "text": "DIG THROUGH IT\nFind an item", "eff": { "item": "random" } }
+	  ] },
+	"hollow_log": { "weight": 10, "title": "HOLLOW LOG",
+	  "intro": "A rotting fallen tree, hollowed out by years of rain.",
+	  "choices": [
+		{ "text": "REACH INSIDE\nFind an item", "eff": { "item": "random" } },
+		{ "text": "BLOOD STASH\n+5 Blood", "eff": { "blood": 5 } },
+		{ "text": "LISTEN CLOSELY\nLearn a fragment", "eff": { "fragment": true } }
+	  ] },
+	"berry_thicket": { "weight": 10, "title": "BERRY THICKET",
+	  "intro": "Dense bushes heavy with dark, glistening berries.",
+	  "choices": [
+		{ "text": "EAT YOUR FILL\nHeal 3 HP", "eff": { "heal": 3 } },
+		{ "text": "FORAGE\n+3 Breath", "eff": { "breath": 3 } },
+		{ "text": "RISK THE DARK ONES\nGamble", "eff": { "gamble": "berries" } }
+	  ] },
+	"nesting_grounds": { "weight": 9, "title": "NESTING GROUNDS",
+	  "intro": "Scattered eggs and soft down between the roots.",
+	  "choices": [
+		{ "text": "EAT THE EGGS\nHeal 2, +2 Breath", "eff": { "heal": 2, "breath": 2 } },
+		{ "text": "LINE YOUR DEN\n+1 Max Breath", "eff": { "max_breath": 1 } },
+		{ "text": "RAID IT ALL\n+6 Blood", "eff": { "blood": 6 } }
+	  ] },
+	"abandoned_den": { "weight": 9, "title": "ABANDONED DEN",
+	  "intro": "An old predator's shelter, long cold. Its owner never returned.",
+	  "choices": [
+		{ "text": "SLEEP\nFull Breath, Heal 1", "eff": { "breath": 99, "heal": 1 } },
+		{ "text": "PICK THROUGH SCRAPS\n+5 Blood", "eff": { "blood": 5 } },
+		{ "text": "SEARCH THE BACK\nFind an item", "eff": { "item": "random" } }
+	  ] },
+	"fog_clearing": { "weight": 8, "title": "FOG CLEARING",
+	  "intro": "Fog pools in a clearing. Shapes drift at the edge of sight.",
+	  "choices": [
+		{ "text": "PUSH THROUGH\n+4 Blood", "eff": { "blood": 4 } },
+		{ "text": "WAIT IT OUT\nRestore all Breath", "eff": { "breath": 99 } },
+		{ "text": "HUNT IN THE FOG\nGamble", "eff": { "gamble": "risk" } }
+	  ] },
+	"ancient_oak": { "weight": 6, "title": "ANCIENT OAK",
+	  "intro": "A vast, ancient oak. Something old stirs in its roots.",
+	  "choices": [
+		{ "text": "COMMUNE\nChoose an instinct", "eff": { "instinct_choice": true } },
+		{ "text": "REST BENEATH IT\nHeal 3 HP", "eff": { "heal": 3 } },
+		{ "text": "STRIP THE BARK\n+4 Blood", "eff": { "blood": 4 } }
+	  ] },
+	"tree_of_life": { "weight": 3, "title": "TREE OF LIFE",
+	  "intro": "A gigantic tree pulses with a faint green glow.",
+	  "choices": [
+		{ "text": "EAT THE FRUIT\nHeal to full", "eff": { "heal": 99 } },
+		{ "text": "COMMUNE\nGain a random instinct", "eff": { "random_instinct": true } },
+		{ "text": "DRINK THE SAP\nFull Breath, Heal 3", "eff": { "breath": 99, "heal": 3 } }
+	  ] },
+	"moonlit_altar": { "weight": 3, "title": "MOONLIT ALTAR",
+	  "intro": "A stone altar bathed in full moonlight. It asks for something.",
+	  "choices": [
+		{ "text": "SACRIFICE FLESH\nGamble HP for Blood", "eff": { "gamble": "altar" } },
+		{ "text": "SACRIFICE BLOOD\nBlood 6 -> instinct", "cost": 6, "eff": { "random_instinct": true } },
+		{ "text": "WALK AWAY\nLeave it be", "eff": {} }
+	  ] },
+	"blood_spring": { "weight": 3, "title": "BLOOD SPRING",
+	  "intro": "Red-tinted water bubbles up from the cracked earth.",
+	  "choices": [
+		{ "text": "DRINK\n+5 Blood", "eff": { "blood": 5 } },
+		{ "text": "BATHE YOUR WOUNDS\nHeal 3, +3 Blood", "eff": { "heal": 3, "blood": 3 } },
+		{ "text": "GORGE\nGamble", "eff": { "gamble": "risk" } }
+	  ] },
+	"sleeping_bear": { "weight": 5, "title": "THE SLEEPING BEAR",
+	  "intro": "A huge bear sleeps over a fresh kill. The smell of meat is overpowering.",
+	  "choices": [
+		{ "text": "STEAL THE KILL\nHigh risk", "eff": { "gamble": "bear" } },
+		{ "text": "SNEAK PAST\nSafe", "eff": {} },
+		{ "text": "MARK THE TERRITORY\nBlood 4 -> item", "cost": 4, "eff": { "item": "random" } }
+	  ] },
+	"watching_eyes": { "weight": 5, "title": "THE WATCHING EYES",
+	  "intro": "Something watches from the treeline. It hasn't moved. Neither have you.",
+	  "choices": [
+		{ "text": "BARE YOUR FANGS\nGamble", "eff": { "gamble": "eyes" } },
+		{ "text": "BACK AWAY SLOWLY\nSafe", "eff": {} },
+		{ "text": "OFFER FLESH\nBlood 6 -> instinct", "cost": 6, "eff": { "random_instinct": true } }
+	  ] },
+	"trapped_animal": { "weight": 5, "title": "TRAPPED ANIMAL",
+	  "intro": "A small creature thrashes in a hunter's snare, exhausted.",
+	  "choices": [
+		{ "text": "FREE IT\nIt may remember", "eff": { "gamble": "trapped" } },
+		{ "text": "EAT IT NOW\nHeal 4 HP", "eff": { "heal": 4 } },
+		{ "text": "LEAVE IT\nWalk on", "eff": {} }
+	  ] },
+	"lost_cub": { "weight": 5, "title": "LOST CUB",
+	  "intro": "A cub mewls in the dark, separated from its mother.",
+	  "choices": [
+		{ "text": "GUARD IT TILL DAWN\nGamble", "eff": { "gamble": "cub" } },
+		{ "text": "GUIDE IT HOME\n+4 Blood (a trail)", "eff": { "blood": 4 } },
+		{ "text": "IGNORE IT\nWalk on", "eff": {} }
+	  ] },
+	"wounded_wolf": { "weight": 5, "title": "WOUNDED WOLF",
+	  "intro": "A wolf drags a ruined leg, snarling but slow. Easy prey - for now.",
+	  "choices": [
+		{ "text": "FINISH IT\n+6 Blood", "eff": { "blood": 6 } },
+		{ "text": "TAKE ITS MEASURE\nGamble for more", "eff": { "gamble": "risk" } },
+		{ "text": "SPARE IT\nWalk on", "eff": {} }
+	  ] },
+	"strange_tracks": { "weight": 4, "title": "STRANGE TRACKS",
+	  "intro": "Tracks like nothing you know lead off into the black trees.",
+	  "choices": [
+		{ "text": "FOLLOW THEM\nGamble", "eff": { "gamble": "risk" } },
+		{ "text": "MARK & MOVE ON\n+3 Blood", "eff": { "blood": 3 } },
+		{ "text": "TURN BACK\nSafe", "eff": {} }
+	  ] },
+	"raccoon": { "weight": 8, "title": "THE TRADER", "special": true,
+	  "intro": "A ring-eyed raccoon spreads its wares on a flat stone and grins." }
+  }
+}

@@ -1,0 +1,185 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8prim0cave01"]
+
+[ext_resource type="Script" path="res://Scenes/cave.gd" id="1_cave"]
+
+[node name="Cave" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_cave")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.07, 0.06, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 18.0
+offset_right = 360.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.6, 0.95, 0.65, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+text = "THE CAVE"
+
+[node name="Flavor" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 58.0
+offset_right = 400.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0.55, 0.67, 0.7, 1)
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+text = "Dripping stone. Old bones. Something breathing at the back of the dark."
+
+[node name="BloodLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 300.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.9, 0.35, 0.35, 1)
+theme_override_font_sizes/font_size = 16
+text = "Blood  0"
+
+[node name="BackBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 14.0
+offset_right = -16.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 13
+text = "SAVES"
+
+[node name="PredatorBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 110.0
+offset_right = 130.0
+offset_bottom = 175.0
+text = "THE OLD PREDATOR
+tips & lore"
+
+[node name="TraderBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -90.0
+offset_right = 300.0
+offset_bottom = -25.0
+text = "THE TRADER
+quests & wares"
+
+[node name="PondBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -90.0
+offset_right = -60.0
+offset_bottom = -25.0
+text = "THE POND
+moves & sparring"
+
+[node name="AltarBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -180.0
+offset_right = 300.0
+offset_bottom = -115.0
+text = "BLOOD ALTAR
+a boon for one run"
+
+[node name="HollowBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -180.0
+offset_right = -60.0
+offset_bottom = -115.0
+text = "THE HOLLOW
+adaptations"
+
+[node name="EnterBtn" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = -30.0
+theme_override_font_sizes/font_size = 18
+text = "ENTER THE FOREST"
+
+[node name="InfoOverlay" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Dim" type="ColorRect" parent="InfoOverlay"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.72)
+
+[node name="Panel" type="Panel" parent="InfoOverlay"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -190.0
+offset_right = 300.0
+offset_bottom = 190.0
+
+[node name="InfoTitle" type="Label" parent="InfoOverlay/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 580.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 22
+text = "TITLE"
+
+[node name="InfoText" type="RichTextLabel" parent="InfoOverlay/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 56.0
+offset_right = 580.0
+offset_bottom = 320.0
+bbcode_enabled = true
+
+[node name="CloseBtn" type="Button" parent="InfoOverlay/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 330.0
+offset_right = 580.0
+offset_bottom = 366.0
+text = "BACK"

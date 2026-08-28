@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "PowerShell(& \"C:\\\\Users\\\\ajuan\\\\OneDrive\\\\Desktop\\\\Godot.exe\" --headless --check-only --script \"C:\\\\Ajay\\\\Godot\\\\Primal\\\\primaldemo\\\\Scenes\\\\battle.gd\" --quit 2>&1)",
+      "Bash(python -m pip install --quiet pypdf)",
+      "PowerShell(& \"C:\\\\Users\\\\ajuan\\\\OneDrive\\\\Desktop\\\\Godot.exe\" --headless --check-only --script \"C:\\\\Ajay\\\\Godot\\\\Primal\\\\primaldemo\\\\Scenes\\\\event_deck.gd\" --quit 2>&1)",
+      "Bash(rm -f \"/c/Users/ajuan/AppData/Roaming/Godot/app_userdata/PrimalDemo/save_0.json\" && echo \"removed test save\")",
+      "PowerShell($g=\"C:\\\\Users\\\\ajuan\\\\OneDrive\\\\Desktop\\\\Godot.exe\"; $p=\"C:\\\\Ajay\\\\Godot\\\\Primal\\\\primaldemo\"; foreach \\($s in @\\(\"res://Scenes/cave.tscn\",\"res://Scenes/save_select.tscn\",\"res://Scenes/battle.tscn\"\\)\\) { Write-Output \"=== $s\"; & $g --headless --path $p $s --quit-after 160 2>&1 | Select-String -Pattern \"SCRIPT ERROR|Parse|Invalid|Nonexistent|null instance|out of bounds|already has a parent|Condition\" | Select-Object -First 12 })",
+      "PowerShell($g=\"C:\\\\Users\\\\ajuan\\\\OneDrive\\\\Desktop\\\\Godot.exe\"; $p=\"C:\\\\Ajay\\\\Godot\\\\Primal\\\\primaldemo\"; $pat='SCRIPT ERROR|Parse|Invalid|Nonexistent|null instance|out of bounds|already has a parent'; foreach \\($s in @\\(\"res://Scenes/cave.tscn\",\"res://Scenes/save_select.tscn\",\"res://Scenes/battle.tscn\"\\)\\) { Write-Output \"=== $s\"; & $g --headless --path $p $s --quit-after 200 2>&1 | Select-String -Pattern $pat | Select-Object -First 12 })",
+      "Bash(d=\"/c/Users/ajuan/AppData/Roaming/Godot/app_userdata/PrimalDemo\"; echo \"Directory contents:\"; ls -la \"$d\" 2>&1; echo; echo \"--- Any save_*.json files anywhere under Godot appdata ---\"; find \"/c/Users/ajuan/AppData/Roaming/Godot\" -iname \"save_*.json\" 2>/dev/null)",
+      "PowerShell($g=\"C:\\\\Users\\\\ajuan\\\\OneDrive\\\\Desktop\\\\Godot.exe\"; $p=\"C:\\\\Ajay\\\\Godot\\\\Primal\\\\primaldemo\"; $pat='SCRIPT ERROR|Parse|Invalid|Nonexistent|null instance|out of bounds|already has a parent'; foreach \\($s in @\\(\"res://Scenes/cave.tscn\",\"res://Scenes/save_select.tscn\",\"res://Scenes/battle.tscn\"\\)\\) { Write-Output \"=== $s\"; & $g --headless --path $p $s --quit-after 220 2>&1 | Select-String -Pattern $pat | Select-Object -First 20 })",
+      "Bash(ls -la \"/c/Users/ajuan/OneDrive/Desktop/\" | grep -i godot; find \"/c/Users/ajuan/OneDrive/Desktop\" -iname \"*.pck\" -o -iname \"*_sc_*\" 2>/dev/null)"
+    ]
+  }
+}

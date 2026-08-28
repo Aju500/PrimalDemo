@@ -1,0 +1,32 @@
+{
+  "categories": { "obs": "Observation", "atk": "Attack", "def": "Defense", "sur": "Survival" },
+  "instincts": {
+	"predators_memory":    { "name": "Predator's Memory",    "cat": "obs", "desc": "Know the enemy's first state each battle." },
+	"keen_eye":            { "name": "Keen Eye",             "cat": "obs", "desc": "Far fewer Calm (unreadable) reads." },
+	"pattern_recognition": { "name": "Pattern Recognition",  "cat": "obs", "desc": "After 2 observes a battle, Calm is pierced." },
+	"stalk":               { "name": "Stalk",                "cat": "obs", "desc": "Your first Observe each battle, if unhit, grants +1 Dominance." },
+	"hunters_patience":    { "name": "Hunter's Patience",    "cat": "obs", "desc": "If your first attack is after an Observe it's cost is 0." },
+	"perfect_read":        { "name": "Perfect Read",         "cat": "obs", "desc": "Unguarded attacks made right after an Observe deal +1." },
+	"watchful_silence":    { "name": "Watchful Silence",     "cat": "obs", "desc": "Breath gained past max is stored as bonus damage on your next attack (capped at +3)." },
+	"ambush":              { "name": "Ambush",               "cat": "atk", "desc": "Deal +1 on the first attack each battle." },
+	"frenzy":              { "name": "Frenzy",               "cat": "atk", "desc": "Each consecutive hit deals +1 (max +3)." },
+	"momentum":            { "name": "Momentum",             "cat": "atk", "desc": "While at +3 Dominance or higher, attacks deal +1." },
+	"apex_predator":       { "name": "Opportunistic",        "cat": "atk", "desc": "Deal +1 vs a resting enemy." },
+	"executioner":         { "name": "Executioner",          "cat": "atk", "desc": "Undefended hits vs enemies at half HP or below deal +1." },
+	"crushing_pressure":   { "name": "Crushing Pressure",    "cat": "atk", "desc": "2nd+ consecutive hit drains 1 enemy Breath." },
+	"blood_scent":         { "name": "Blood Scent",          "cat": "atk", "desc": "Gain +2 Blood per kill." },
+	"thick_hide":          { "name": "Thick Hide",           "cat": "def", "desc": "Gain +1 Max HP." },
+	"iron_nerves":         { "name": "Iron Nerves",          "cat": "def", "desc": "Fully blocking an attack restores 1 Breath." },
+	"counter_reflex":      { "name": "Counter Reflex",       "cat": "def", "desc": "Mitigating damage deals 1 back (50%)." },
+	"unyielding":          { "name": "Unyielding",           "cat": "def", "desc": "Mitigate damage and your attack NEXT turn deals +1." },
+	"defensive_posture":   { "name": "Defensive Posture",    "cat": "def", "desc": "2nd+ consecutive Guard restores 1 Breath." },
+	"evasive_reflexes":    { "name": "Evasive Reflexes",     "cat": "def", "desc": "Fully blocking makes the enemy lose 1 Breath." },
+	"last_stand":          { "name": "Last Stand",           "cat": "def", "desc": "Gain 1 Breath each turn while below half HP." },
+	"deep_lungs":          { "name": "Deep Lungs",           "cat": "sur", "desc": "Gain +1 Max Breath." },
+	"endurance":           { "name": "Endurance",            "cat": "sur", "desc": "Gain +1 Max Breath." },
+	"predators_hunger":    { "name": "Predator's Hunger",    "cat": "sur", "desc": "Heal +1 extra HP after a kill." },
+	"scavenger":           { "name": "Scavenger",            "cat": "sur", "desc": "Gain +2 Blood from events." },
+	"efficient_metabolism":{ "name": "Efficient Metabolism", "cat": "sur", "desc": "Healing from events/items restores +1." },
+	"second_wind":         { "name": "Second Wind",          "cat": "sur", "desc": "Restore +1 Breath between fights." }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "order": [
+	["EARLY  PREY", ["deer", "rabbit"]],
+	["MID  FOREST", ["fox", "stoat", "boar", "wolf_cub", "lynx", "razorback"]],
+	["LATE  /  APEX", ["stag", "wolf", "leadwolf", "greaterstag", "bear"]]
+  ],
+  "species": {
+	"deer": {
+	  "name": "Deer", "tier": "Early", "hp": 6, "breath": 4, "calm": 0.05,
+	  "flavor": "Soft-eyed. Watching the treeline, not you. That is a mistake.",
+	  "moves": { "dodge": 1, "block": 2, "light_attack": 1 },
+	  "flags": { "rhythm": true },
+	  "drops": { "chance": 0.08, "items": ["random_common"] },
+	  "tells": [
+		"[b]Won't strike first.[/b] It opens Skittish and only turns on you if cornered or pressed several turns running - safe to open aggressive.",
+		"[b]Falls into a rhythm.[/b] It tends to alternate defend and light attack. Two Observes and you own the pattern."
+	  ],
+	  "read": "Skittish-heavy, almost no Calm. Your teaching fight."
+	},
+	"rabbit": {
+	  "name": "Rabbit", "tier": "Early", "hp": 4, "breath": 3, "calm": 0.0,
+	  "flavor": "It is already looking for the way out. It was looking before you arrived.",
+	  "moves": { "dodge": 3, "light_attack": 1, "block": 1 },
+	  "flags": {},
+	  "drops": { "chance": 0.08, "items": ["random_common"] },
+	  "tells": [
+		"[b]Almost never commits.[/b] It dodges and waits; it does not fight. A wasted Claw into its Dodge is how you lose the kill.",
+		"[b]Fragile.[/b] The lowest HP in the forest - if you can land a clean hit, it folds fast. Pressure over patience."
+	  ],
+	  "read": "Skittish to the point of cowardice. The easiest read - and the easiest Blood to fumble."
+	},
+	"fox": {
+	  "name": "Fox", "tier": "Mid", "hp": 6, "breath": 5, "calm": 0.25,
+	  "flavor": "The Forest's first liar.",
+	  "moves": { "light_attack": 2, "feint": { "full": 2, "empty": 0 }, "dodge": { "full": 1, "empty": 2 } },
+	  "flags": { "block_suppress": true },
+	  "drops": { "chance": 0.1, "items": ["random_common"] },
+	  "tells": [
+		"[b]The forest's first liar.[/b] Its Feint reads Aggressive but is a bluff for your Guard. An Aggressive read from a fox is a question, not a fact - and a heavy read is the real thing.",
+		"[b]Deceives with its health.[/b] Fresh, it feints and probes; wounded, it slips to Dodge and waits. Blocking one of its strikes throws it off its next attack."
+	  ],
+	  "read": "Calm-heavy, deceptive. The animal that teaches you Observe isn't gospel."
+	},
+	"stoat": {
+	  "name": "Stoat", "tier": "Mid", "hp": 6, "breath": 5, "calm": 0.15,
+	  "flavor": "Small, quick, and entirely without fear of you.",
+	  "moves": { "light_attack": 3, "dodge": { "full": 1, "empty": 2 } },
+	  "flags": { "block_suppress": true },
+	  "drops": { "chance": 0.1, "items": ["random_common"] },
+	  "tells": [
+		"[b]Quick and evasive.[/b] Like a fox that never learned to lie - it slips your heavies and chips with light strikes, but it won't Feint.",
+		"[b]Thrown by a block.[/b] Guard one of its strikes and it hesitates to press the next turn."
+	  ],
+	  "read": "Skittish and relentless. A fox without the bluff."
+	},
+	"boar": {
+	  "name": "Boar", "tier": "Mid", "hp": 8, "breath": 5, "calm": 0.2,
+	  "flavor": "Low to the ground and utterly convinced it is dangerous.",
+	  "moves": { "attack": { "full": 3, "empty": 1 }, "feint": { "full": 2, "empty": 0 }, "dig": { "full": 0, "empty": 3 }, "block": 1 },
+	  "flags": {},
+	  "move_names": { "attack": "Gore" },
+	  "drops": { "chance": 0.1, "items": ["random_common"] },
+	  "tells": [
+		"[b]Gores while it's healthy.[/b] Fresh, it presses with its tusks; wounded, it turns to digging and bluffing instead of committing.",
+		"[b]Digs only when hurt.[/b] Dig heals 3 but wastes a turn, and it won't dig near full health - so a digging boar is a bleeding boar; press it."
+	  ],
+	  "read": "Aggressive when strong, greedy and evasive when wounded."
+	},
+	"wolf_cub": {
+	  "name": "Wolf Cub", "tier": "Mid", "hp": 7, "breath": 5, "calm": 0.12,
+	  "flavor": "It has the eyes of the pack, but not yet the patience.",
+	  "moves": { "attack": 3, "light_attack": 1, "block": 1 },
+	  "flags": { "aggressive_low_breath": true },
+	  "drops": { "chance": 0.1, "items": ["random_common"] },
+	  "tells": [
+		"[b]All teeth, no craft.[/b] It presses with claws but hasn't learned the Bite - a wolf without its worst trick.",
+		"[b]Hunts weakness like its elders.[/b] It grows more aggressive when your Breath runs low."
+	  ],
+	  "read": "Aggressive and unrefined. A preview of the wolf to come."
+	},
+	"lynx": {
+	  "name": "Lynx", "tier": "Mid", "hp": 8, "breath": 6, "calm": 0.15,
+	  "flavor": "The branches above you have been empty for a long time. Or at least, you thought they were.",
+	  "moves": { "attack": 2, "light_attack": 3, "dodge": 2 },
+	  "flags": { "ambush_opener": true, "aggressive_low_breath": true },
+	  "drops": { "chance": 0.1, "items": ["random_common"] },
+	  "tells": [
+		"[b]Opens with an ambush.[/b] Its first move each fight is a committed strike - expect aggression turn one and be ready to eat or block it.",
+		"[b]Presses your weakness.[/b] It grows more aggressive the moment your Breath runs low, and favours quick light strikes to chip you down."
+	  ],
+	  "read": "Aggressive-first (the ambush), then patient repositioning."
+	},
+	"razorback": {
+	  "name": "Razorback", "tier": "Mid", "hp": 11, "breath": 5, "calm": 0.2,
+	  "flavor": "It's tusks have come in. Your scars remember what they are capable of.",
+	  "moves": { "attack": 2, "charge": 1, "block": 2 },
+	  "flags": { "enraged": true },
+	  "move_names": { "attack": "Gore" },
+	  "drops": { "chance": 0.12, "items": ["random_common", "random_common", "random_rare"] },
+	  "tells": [
+		"[b]Enraged when wounded.[/b] Below 40% HP its attacks deal +1. Finishing it is more dangerous than starting it - don't get sloppy on the last hit.",
+		"[b]The Charge announces itself.[/b] A Calm wind-up precedes its heavy Charge. Read the set, block or wait it out, punish the recovery."
+	  ],
+	  "read": "Aggressive, with a Calm tell before the big hit. Reads shift toward danger as its HP drops."
+	},
+	"stag": {
+	  "name": "Stag", "tier": "Late", "hp": 12, "breath": 6, "calm": 0.3,
+	  "flavor": "It has weathered more winters than you, and it does not spook.",
+	  "moves": { "light_attack": 1, "attack": 2, "block": 2, "feint": 1 },
+	  "flags": {},
+	  "move_names": { "attack": "Gore" },
+	  "drops": { "chance": 0.14, "items": ["random_common", "stag_heart"] },
+	  "tells": [
+		"[b]Plays a real game.[/b] It varies pace and mixes a Feint in - an Aggressive read can be a bluff. Treat it like a fight, not a hunt.",
+		"[b]Patient.[/b] It won't overcommit; it waits for you to make the opening. Manage your Breath for the long fight."
+	  ],
+	  "read": "Balanced and deceptive - measured aggression around stretches of Calm."
+	},
+	"wolf": {
+	  "name": "Wolf", "tier": "Late", "hp": 9, "breath": 6, "calm": 0.15,
+	  "flavor": "It is not in a hurry. It has already decided how this ends. It is only waiting for you to agree.",
+	  "moves": { "attack": 3, "bite": 2, "block": 1 },
+	  "flags": { "block_suppress": true, "aggressive_low_breath": true },
+	  "drops": { "chance": 0.14, "items": ["random_common", "wolf_fang"] },
+	  "tells": [
+		"[b]Blocking cools its tempo.[/b] Successfully Guarding a wolf attack makes it less likely to attack next turn - a clean block is a small opening, not just defense.",
+		"[b]Hunts weakness with the Bite.[/b] It presses when your Breath is low. The Bite is cheap if it lands raw, expensive if you block it - so read it, block it, and drain its Breath."
+	  ],
+	  "read": "Calm-heavy for its tier. It wants you to guess wrong, then drains your Breath when you do."
+	},
+	"leadwolf": {
+	  "name": "Lead Wolf", "tier": "Late (elite)", "hp": 12, "breath": 7, "calm": 0.3,
+	  "flavor": "The pack's last leader was strong. This one is stronger.",
+	  "moves": { "attack": 2, "bite": 2, "feint": 1, "block": 1 },
+	  "flags": { "calm_cornered": true, "aggressive_low_breath": true, "block_suppress": true },
+	  "drops": { "chance": 0.18, "items": ["random_rare", "wolf_fang", "wolf_fang"] },
+	  "tells": [
+		"[b]Calm when cornered.[/b] Unlike lesser prey it does NOT get twitchy at low HP - it goes Calm and unreadable. The kill is the hardest read of the fight; don't autopilot the finisher.",
+		"[b]Reads you back.[/b] Fall into a predictable rhythm and it begins to anticipate your attacks. [i](Pending the enemy-memory system - on record, not yet live.)[/i]"
+	  ],
+	  "read": "Deceptive and Calm-heavy, worst exactly when it's nearly dead."
+	},
+	"greaterstag": {
+	  "name": "Greater Stag", "tier": "Late (lesser-boss)", "hp": 16, "breath": 7, "calm": 0.3,
+	  "flavor": "The antlers have counted more winters than you will. It is not frightened of the dark. It is the reason other things are.",
+	  "moves": { "light_attack": 1, "attack": 2, "block": 1, "dodge": 1, "feint": 1 },
+	  "flags": { "calm_cornered": true },
+	  "move_names": { "attack": "Gore" },
+	  "drops": { "chance": 0.18, "items": ["random_rare", "stag_heart", "stag_heart"] },
+	  "tells": [
+		"[b]The full kit.[/b] It has a Light Attack and its Gore, plus a Dodge and a Feint - it varies pace, it lies, it defends. This is a fight, not a hunt.",
+		"[b]Calm when cornered.[/b] Regal and unreadable at low HP. Combined with its Feint, the endgame is a genuine guessing match."
+	  ],
+	  "read": "Balanced and deceptive - the most complete non-boss in the forest."
+	},
+	"bear": {
+	  "name": "Bear", "tier": "Apex", "hp": 22, "breath": 6, "calm": 0.4,
+	  "flavor": "Everything else in the forest moves out of its way. You are about to explain why.",
+	  "moves": { "charge": 2, "attack": 2, "block": 1 },
+	  "flags": { "calm_cornered": true, "enraged": true, "boss_double_rest": true },
+	  "move_names": { "attack": "Maul", "charge": "Swipe" },
+	  "drops": { "chance": 0.3, "items": ["random_rare", "bear_claw", "bear_claw"] },
+	  "tells": [
+		"[b]Calm and enraged at the finish.[/b] Below 40% HP it stays Calm (unreadable) AND deals +1. The most dangerous phase is the one you thought was the victory lap - save a full block for it.",
+		"[b]A slow, heaving recovery.[/b] When the Bear is spent it slumps into a two-turn rest - a rare, wide-open window. Pour everything in before it heaves back up to full."
+	  ],
+	  "read": "Slow, Calm-heavy, brutal on contact. A patience fight - bleed its Breath, punish the long Rests, respect the finish."
+	}
+  }
+}

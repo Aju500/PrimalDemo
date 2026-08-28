@@ -1,0 +1,13 @@
+{
+  "crow_feather":  { "name": "Crow Feather",   "desc": "+1 Breath.",                              "rarity": "common" },
+  "dried_meat":    { "name": "Dried Meat",      "desc": "Restore 2 Breath.",                       "rarity": "common" },
+  "bloodroot":     { "name": "Bloodroot",       "desc": "Deal 1 damage now.",                      "rarity": "common" },
+  "sharp_stone":   { "name": "Sharp Stone",     "desc": "Your attack THIS turn deals +2 damage.",  "rarity": "uncommon" },
+  "pelt":          { "name": "Pelt",            "desc": "Blocks 2 damage this turn only.",         "rarity": "uncommon" },
+  "spider_egg":    { "name": "Spider Egg Sac",  "desc": "Enemy loses 1 Breath.",                   "rarity": "uncommon" },
+  "owl_eye":       { "name": "Owl Eye",         "desc": "Reveal the exact next action.",           "rarity": "rare" },
+  "ancient_acorn": { "name": "Ancient Acorn",   "desc": "Heal to full HP.",                        "rarity": "rare" },
+  "bear_claw":     { "name": "Bear Claw",       "desc": "Your next attack deals +3.",              "rarity": "exclusive" },
+  "wolf_fang":     { "name": "Wolf Fang",       "desc": "Your next attack ignores the enemy's defense.", "rarity": "exclusive" },
+  "stag_heart":    { "name": "Stag Heart",      "desc": "Reveal exact reads for the rest of this battle.", "rarity": "exclusive" }
+}

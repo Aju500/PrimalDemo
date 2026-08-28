@@ -1,0 +1,11 @@
+{
+  "light_attack": { "name": "Light Attack", "verb": "snaps at you", "cost": 1, "damage": 1, "weight": "light", "read": "aggressive", "bestiary": "1 Breath / 1 dmg" },
+  "attack":       { "name": "Claw",         "verb": "strikes",      "cost": 2, "damage": 2, "weight": "heavy", "read": "aggressive", "bestiary": "2 Breath / 2 dmg" },
+  "charge":       { "name": "Charge",       "verb": "CHARGES",      "cost": 3, "damage": 3, "weight": "heavy", "read": "aggressive", "bestiary": "3 Breath / 3 dmg, telegraphed", "flags": { "telegraph": true } },
+  "bite":         { "name": "Bite",         "verb": "lunges for a bite", "cost": 2, "damage": 2, "weight": "heavy", "read": "aggressive", "bestiary": "2 Breath / 2 dmg; only 1 Breath if it lands unblocked, 3 if you defend it", "flags": { "bite_economy": true } },
+  "dodge":        { "name": "Dodge",        "verb": "shifts its weight, light on its feet", "cost": 2, "weight": "light", "read": "skittish", "bestiary": "2 Breath / negates your strike" },
+  "block":        { "name": "Guard",        "verb": "lowers its head, braced", "cost": 1, "weight": "heavy", "read": "skittish", "bestiary": "1 Breath / -1 dmg taken" },
+  "feint":        { "name": "Feint",        "verb": "makes a sudden, aggressive lunge", "cost": 1, "breath_gain": 2, "weight": "light", "read": "aggressive", "bestiary": "1 Breath, reads Aggressive but never lands, recovers 2 Breath", "flags": { "appears_aggressive": true } },
+  "dig":          { "name": "Dig",          "verb": "digs", "cost": 1, "heal": 3, "weight": "heavy", "read": "special", "bestiary": "1 Breath, 50% heal 3 (only when wounded)", "flags": { "forager": true } },
+  "rest":         { "name": "Rest",         "verb": "steadies its breathing", "cost": 0, "weight": "light", "read": "tired", "bestiary": "regains Breath when exhausted", "flags": { "restore_full": true } }
+}

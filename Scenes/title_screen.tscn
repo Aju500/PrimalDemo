@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdiokdx85lce2"]
+
+[ext_resource type="Script" uid="uid://criaxtufr6mi" path="res://Scenes/title_screen.gd" id="1_12m1t"]
+[ext_resource type="Texture2D" uid="uid://d3kkdvekmodg4" path="res://Assets/TitleBackground.png" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://dpwjy11uiuwod" path="res://Assets/Title.png" id="2_4gxqj"]
+[ext_resource type="Texture2D" uid="uid://cgpj8ltpbjvg1" path="res://Assets/LoadingBarFrame.tres" id="3_4gxqj"]
+[ext_resource type="Texture2D" uid="uid://bnhj72yhmp3o7" path="res://Assets/LoadingBarFill.tres" id="3_twnyg"]
+[ext_resource type="Texture2D" uid="uid://bvyrrnpxc677d" path="res://Assets/StartButton.tres" id="5_55kwv"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_12m1t")
+
+[node name="Black" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -308.0
+offset_top = -25.0
+offset_right = 1258.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -283.0
+offset_top = 25.0
+offset_right = 1252.0
+offset_bottom = 970.0
+texture = ExtResource("1_p3fck")
+stretch_mode = 1
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 191.0
+offset_right = 1171.0
+offset_bottom = 514.0
+texture = ExtResource("2_4gxqj")
+expand_mode = 1
+
+[node name="LoadingBar" type="Node" parent="."]
+
+[node name="LoadingBarFill" type="TextureProgressBar" parent="LoadingBar"]
+offset_left = 348.0
+offset_top = 546.0
+offset_right = 768.0
+offset_bottom = 586.0
+nine_patch_stretch = true
+texture_progress = ExtResource("3_twnyg")
+
+[node name="LoadingBarFrame" type="TextureRect" parent="LoadingBar"]
+offset_left = 339.0
+offset_top = 544.0
+offset_right = 771.0
+offset_bottom = 584.0
+texture = ExtResource("3_4gxqj")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_right = 1164.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 1)
+
+[node name="StartButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 501.0
+offset_top = 461.0
+offset_right = 661.0
+offset_bottom = 612.0
+icon = ExtResource("5_55kwv")
+expand_icon = true

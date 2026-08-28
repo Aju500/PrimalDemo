@@ -1,0 +1,23 @@
+{
+  "observe":    { "name": "Observe",    "cat": "spc", "kind": "utility", "cost": 0, "always": true, "fragments": 0,
+                  "desc": "Reveal the next tell. +2 Breath. (Click the creature)" },
+  "claw":       { "name": "Claw",       "cat": "atk", "kind": "attack",  "cost": 2, "damage": 2, "start": true, "fragments": 0,
+                  "desc": "2 Breath  ->  2 + Dominance" },
+  "guard":      { "name": "Guard",      "cat": "def", "kind": "defend",  "cost": 1, "mitigate": 1, "start": true, "fragments": 0,
+                  "desc": "1 Breath  ->  -1 damage taken" },
+
+  "heavy_claw": { "name": "Heavy Claw", "cat": "atk", "kind": "attack",  "cost": 3, "damage": 4, "fragments": 3,
+                  "desc": "3 Breath  ->  4 + Dominance" },
+  "pounce":     { "name": "Pounce",     "cat": "atk", "kind": "attack",  "cost": 3, "damage": 3, "ignore_block": true, "fragments": 4,
+                  "desc": "3 Breath  ->  3 dmg, ignores a Guard (a Dodge still evades)" },
+
+  "dodge":      { "name": "Dodge",      "cat": "def", "kind": "defend",  "cost": 2, "mitigate": 99, "fragments": 3,
+                  "desc": "2 Breath  ->  negate an attack entirely" },
+  "counter":    { "name": "Counter",    "cat": "def", "kind": "defend",  "cost": 2, "mitigate": 1, "counter": 1, "fragments": 4,
+                  "desc": "2 Breath  ->  -1 damage taken, and deal 1 back" },
+
+  "howl":       { "name": "Howl",       "cat": "spc", "kind": "utility", "cost": 2, "enemy_breath": -1, "fragments": 3,
+                  "desc": "2 Breath  ->  drain 1 enemy Breath" },
+  "mark_prey":  { "name": "Mark Prey",  "cat": "spc", "kind": "utility", "cost": 1, "next_attack": 2, "fragments": 4,
+                  "desc": "1 Breath  ->  your next attack deals +2" }
+}

@@ -1,0 +1,5 @@
+{
+  "reckless_vigor": { "name": "Reckless Vigor", "desc": "Next hunt only: start at +2 Dominance.",        "cost": 4, "flags": { "start_dominance": 2 } },
+  "extra_lungs":    { "name": "Swollen Lungs",  "desc": "Next hunt only: +2 Max Breath.",                "cost": 5, "flags": { "max_breath": 2 } },
+  "bloodrush":      { "name": "Bloodrush",      "desc": "Next hunt only: your first kill grants double Blood.", "cost": 6, "flags": { "double_first_kill": true } }
+}
